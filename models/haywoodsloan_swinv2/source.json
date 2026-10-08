@@ -1,0 +1,12 @@
+{
+  "repo_id": "haywoodsloan/ai-image-detector-deploy",
+  "revision": "4ae1822603cb1ec980c217cfde1ef1b8e0477a16",
+  "license": "apache-2.0",
+  "id2label": {
+    "0": "artificial",
+    "1": "real"
+  },
+  "architecture": [
+    "Swinv2ForImageClassification"
+  ]
+}

@@ -1,0 +1,26 @@
+# CLIP ViT-B/16 backbone: CLIP features are known to generalize better to unseen generators.
+name: clip_vitb16
+backbone: vit_base_patch16_clip_224.openai
+input_size: 224
+batch_size: 16
+grad_accum: 2
+head_epochs: 3
+head_lr: 0.001
+epochs: 8
+lr: 0.00002
+weight_decay: 0.05
+warmup_epochs: 1
+drop_rate: 0.1
+patience: 3
+select_metric: roc_auc
+seed: 42
+num_workers: 4
+amp: true
+aug:
+  crop_scale_min: 0.6
+  rotation: 10
+  brightness: 0.2
+  contrast: 0.2
+  jpeg_p: 0.5
+  jpeg_quality: [60, 100]
+  blur_p: 0.1

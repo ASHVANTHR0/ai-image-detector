@@ -1,0 +1,14 @@
+{
+  "repo_id": "NYUAD-ComNets/NYUAD_AI-generated_images_detector",
+  "revision": "b0a2e665f6e40164436cae6c0c95e7e4386f7684",
+  "license": "apache-2.0",
+  "id2label": {
+    "0": "dalle",
+    "1": "real",
+    "2": "sd"
+  },
+  "architecture": [
+    "ViTForImageClassification"
+  ],
+  "local_patch": "preprocessor_config.json: ViTFeatureExtractor -> ViTImageProcessor (transformers 5)"
+}

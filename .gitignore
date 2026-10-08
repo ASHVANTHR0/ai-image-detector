@@ -1,0 +1,35 @@
+# Environments / dependencies
+venv/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data (keep dataset/manifest.csv and SOURCES.md in git)
+dataset/raw/**
+dataset/processed/**
+dataset/train/**
+dataset/validation/**
+dataset/test/**
+!dataset/**/.gitkeep
+
+# Model weights (re-download with scripts/download_models.py, or re-train)
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.pt
+models/**/.cache/
+experiments/*/best.pt
+
+# Local database and build output
+*.db
+frontend/dist/
+backend/.env
+
+# Miscellaneous
+*.log
+/plan/
+gitignore
+
+# Benchmark images (OpenFake, CC BY-NC 4.0); re-create with scripts/fetch_benchmark.py. The manifest stays tracked.
+dataset/benchmark/openfake/

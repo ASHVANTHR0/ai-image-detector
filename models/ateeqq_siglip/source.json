@@ -1,0 +1,12 @@
+{
+  "repo_id": "Ateeqq/ai-vs-human-image-detector",
+  "revision": "60e82406916921b823616bee33397baab38af3f0",
+  "license": "apache-2.0",
+  "id2label": {
+    "0": "ai",
+    "1": "hum"
+  },
+  "architecture": [
+    "SiglipForImageClassification"
+  ]
+}

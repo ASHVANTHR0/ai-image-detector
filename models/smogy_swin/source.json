@@ -1,0 +1,12 @@
+{
+  "repo_id": "Smogy/SMOGY-Ai-images-detector",
+  "revision": "fb9aadb85642d707f05b40191689d60f75b9a3e6",
+  "license": "cc-by-nc-4.0",
+  "id2label": {
+    "0": "artificial",
+    "1": "human"
+  },
+  "architecture": [
+    "SwinForImageClassification"
+  ]
+}

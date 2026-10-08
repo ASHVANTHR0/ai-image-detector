@@ -1,0 +1,12 @@
+{
+  "repo_id": "dima806/ai_vs_real_image_detection",
+  "revision": "5d647683672ffd0080441f4e8b4345934c44cc61",
+  "license": "apache-2.0",
+  "id2label": {
+    "0": "REAL",
+    "1": "FAKE"
+  },
+  "architecture": [
+    "ViTForImageClassification"
+  ]
+}

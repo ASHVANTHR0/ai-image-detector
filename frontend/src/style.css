@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ai: #dc2626;
+  --color-real: #059669;
+  --color-uncertain: #d97706;
+}
+
+@utility card {
+  @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm;
+}
+
+@utility btn {
+  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2
+    disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-primary {
+  @apply btn bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+@utility btn-secondary {
+  @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}

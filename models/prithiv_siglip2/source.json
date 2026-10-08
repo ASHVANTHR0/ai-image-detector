@@ -1,0 +1,13 @@
+{
+  "repo_id": "prithivMLmods/AI-vs-Deepfake-vs-Real-Siglip2",
+  "revision": "4b0c6081b9c9d890cf0251d7a5e736adc10f2d49",
+  "license": "apache-2.0",
+  "id2label": {
+    "0": "AI",
+    "1": "Deepfake",
+    "2": "Real"
+  },
+  "architecture": [
+    "SiglipForImageClassification"
+  ]
+}

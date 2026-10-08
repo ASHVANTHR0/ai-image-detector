@@ -1,0 +1,63 @@
+{
+  "version": "candidates-all",
+  "method": "weighted_average",
+  "members": [
+    {
+      "name": "sdxl_detector",
+      "type": "hf",
+      "path": "models/detector_a",
+      "weight": 1.0
+    },
+    {
+      "name": "ai_image_detector",
+      "type": "hf",
+      "path": "models/detector_b",
+      "weight": 1.0
+    },
+    {
+      "name": "ateeqq_siglip",
+      "type": "hf",
+      "path": "models/ateeqq_siglip",
+      "weight": 1.0
+    },
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 1.0
+    },
+    {
+      "name": "dima806_vit_real",
+      "type": "hf",
+      "path": "models/dima806_vit_real",
+      "weight": 1.0
+    },
+    {
+      "name": "dima806_vit_human",
+      "type": "hf",
+      "path": "models/dima806_vit_human",
+      "weight": 1.0
+    },
+    {
+      "name": "smogy_swin",
+      "type": "hf",
+      "path": "models/smogy_swin",
+      "weight": 1.0
+    },
+    {
+      "name": "nyuad_vit",
+      "type": "hf",
+      "path": "models/nyuad_vit",
+      "weight": 1.0
+    },
+    {
+      "name": "prithiv_siglip2",
+      "type": "hf",
+      "path": "models/prithiv_siglip2",
+      "weight": 1.0
+    }
+  ],
+  "calibration": null,
+  "t_low": 0.1,
+  "t_high": 0.9
+}

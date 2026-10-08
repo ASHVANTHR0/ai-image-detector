@@ -1,0 +1,12 @@
+{
+  "repo_id": "Organika/sdxl-detector",
+  "revision": "b37fede8562cb72b89ec201c0987f96ba21b518a",
+  "license": "cc-by-nc-3.0",
+  "id2label": {
+    "0": "artificial",
+    "1": "human"
+  },
+  "architecture": [
+    "SwinForImageClassification"
+  ]
+}

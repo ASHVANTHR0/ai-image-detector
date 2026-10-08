@@ -1,0 +1,12 @@
+{
+  "repo_id": "dima806/ai_vs_human_generated_image_detection",
+  "revision": "341594f2b003d185db789becf48a2286c177b926",
+  "license": "apache-2.0",
+  "id2label": {
+    "0": "human",
+    "1": "AI-generated"
+  },
+  "architecture": [
+    "ViTForImageClassification"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "repo_id": "umm-maybe/AI-image-detector",
+  "revision": "c7e223baf11bc40528af364ba7bdea030ef42f9e",
+  "license": "cc-by-4.0",
+  "id2label": {
+    "0": "artificial",
+    "1": "human"
+  },
+  "architecture": [
+    "SwinForImageClassification"
+  ]
+}
