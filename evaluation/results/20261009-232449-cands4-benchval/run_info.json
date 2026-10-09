@@ -1,0 +1,46 @@
+{
+  "run_id": "20261009-232449-cands4-benchval",
+  "split": "validation",
+  "n_images": 218,
+  "dataset_version": "f5db3bfb5c3f47b4",
+  "manifest": "dataset/benchmark/manifest.csv",
+  "config": "C:\\Users\\Ashvanth\\AppData\\Local\\Temp/claude/C--Users-Ashvanth-Desktop-Ai-image-finder/ce837607-5f66-4c21-8a97-f1c7c1edf1cb/scratchpad/cands4.json",
+  "members": [
+    {
+      "name": "ateeqq_siglip",
+      "type": "hf",
+      "path": "models/ateeqq_siglip",
+      "weight": 1.0
+    },
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 1.0
+    },
+    {
+      "name": "detector_clip",
+      "type": "timm",
+      "path": "models/detector_clip",
+      "weight": 1.0
+    },
+    {
+      "name": "detector_clip_ft",
+      "type": "timm",
+      "path": "models/detector_clip_ft",
+      "weight": 1.0
+    }
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "peak_gpu_memory_mb": 3041,
+  "ms_per_image": {
+    "ateeqq_siglip": 13.99,
+    "haywoodsloan_swinv2": 38.11,
+    "detector_clip": 13.79,
+    "detector_clip_ft": 13.76
+  },
+  "batch_size": 16,
+  "python": "3.13.5",
+  "torch": "2.11.0+cu128"
+}

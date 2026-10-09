@@ -1,0 +1,39 @@
+{
+  "run_id": "20261009-231701-ensemble-v2-ownval",
+  "split": "validation",
+  "n_images": 468,
+  "dataset_version": "e59e60ea7dea7fb1",
+  "manifest": "dataset/manifest.csv",
+  "config": "C:\\Users\\Ashvanth\\Desktop\\Ai_image_finder\\models\\ensemble\\ensemble_config.json",
+  "members": [
+    {
+      "name": "ateeqq_siglip",
+      "type": "hf",
+      "path": "models/ateeqq_siglip",
+      "weight": 0.1169
+    },
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 0.4661
+    },
+    {
+      "name": "detector_clip",
+      "type": "timm",
+      "path": "models/detector_clip",
+      "weight": 0.9523
+    }
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "peak_gpu_memory_mb": 2714,
+  "ms_per_image": {
+    "ateeqq_siglip": 9.49,
+    "haywoodsloan_swinv2": 33.12,
+    "detector_clip": 9.67
+  },
+  "batch_size": 16,
+  "python": "3.13.5",
+  "torch": "2.11.0+cu128"
+}

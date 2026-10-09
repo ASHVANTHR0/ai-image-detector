@@ -1,0 +1,2322 @@
+{
+  "binary@0.5": {
+    "n": 466,
+    "accuracy": 0.9141630901287554,
+    "precision": 0.9223744292237442,
+    "recall": 0.8977777777777778,
+    "f1": 0.9099099099099099,
+    "specificity": 0.9294605809128631,
+    "fpr": 0.07053941908713693,
+    "fnr": 0.10222222222222223,
+    "confusion_matrix": {
+      "TN": 224,
+      "FP": 17,
+      "FN": 23,
+      "TP": 202
+    },
+    "roc_auc": 0.9745689257722452,
+    "ci95": {
+      "accuracy": [
+        0.8862660944206009,
+        0.9399141630901288
+      ],
+      "precision": [
+        0.8858414872798434,
+        0.9555653450807636
+      ],
+      "recall": [
+        0.8495528936942274,
+        0.9350679413179412
+      ],
+      "f1": [
+        0.8785023538415158,
+        0.9369408454007151
+      ],
+      "fpr": [
+        0.04052702702702703,
+        0.10400416666666666
+      ],
+      "fnr": [
+        0.06493205868205867,
+        0.15044710630577257
+      ],
+      "roc_auc": [
+        0.9613177180365721,
+        0.9854189110652025
+      ]
+    }
+  },
+  "thresholded": {
+    "t_low": 0.23,
+    "t_high": 0.74,
+    "coverage": 0.8841201716738197,
+    "uncertain_rate": 0.11587982832618025,
+    "uncertain_rate_real": 0.1078838174273859,
+    "uncertain_rate_ai": 0.12444444444444444,
+    "decided": {
+      "n": 412,
+      "accuracy": 0.9538834951456311,
+      "precision": 0.9540816326530612,
+      "recall": 0.949238578680203,
+      "f1": 0.9516539440203563,
+      "specificity": 0.958139534883721,
+      "fpr": 0.04186046511627907,
+      "fnr": 0.050761421319796954,
+      "confusion_matrix": {
+        "TN": 206,
+        "FP": 9,
+        "FN": 10,
+        "TP": 187
+      }
+    }
+  },
+  "by_generator": {
+    "none": {
+      "binary@0.5": {
+        "n": 241,
+        "accuracy": 0.9294605809128631,
+        "precision": 0.0,
+        "recall": NaN,
+        "f1": 0.0,
+        "specificity": 0.9294605809128631,
+        "fpr": 0.07053941908713693,
+        "fnr": NaN,
+        "confusion_matrix": {
+          "TN": 224,
+          "FP": 17,
+          "FN": 0,
+          "TP": 0
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.8921161825726142,
+        "uncertain_rate": 0.1078838174273859,
+        "uncertain_rate_real": 0.1078838174273859,
+        "uncertain_rate_ai": NaN,
+        "decided": {
+          "n": 215,
+          "accuracy": 0.958139534883721,
+          "precision": 0.0,
+          "recall": NaN,
+          "f1": 0.0,
+          "specificity": 0.958139534883721,
+          "fpr": 0.04186046511627907,
+          "fnr": NaN,
+          "confusion_matrix": {
+            "TN": 206,
+            "FP": 9,
+            "FN": 0,
+            "TP": 0
+          }
+        }
+      }
+    },
+    "openfake-amateur-photography-v6": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-anima-preview": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-animagine-xl-4.0": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-chroma": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-cyberrealistic-pony-v14.1": {
+      "binary@0.5": {
+        "n": 3,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 3
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-cyberrealistic-pony-v15.0": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "openfake-cyberrealistic-pony-v17.0": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-cyberrealistic-xl-v9.0": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-dalle-3": {
+      "binary@0.5": {
+        "n": 4,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 4
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 4,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 4
+          }
+        }
+      }
+    },
+    "openfake-flux-1.1-pro": {
+      "binary@0.5": {
+        "n": 8,
+        "accuracy": 0.625,
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.7692307692307693,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.375,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 3,
+          "TP": 5
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.5,
+        "uncertain_rate": 0.5,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.5,
+        "decided": {
+          "n": 4,
+          "accuracy": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.5,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 2,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "openfake-flux-amateursnapshotphotos": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-flux-mvc5000": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-flux-realism": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-flux.1-dev": {
+      "binary@0.5": {
+        "n": 20,
+        "accuracy": 0.6,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.4,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 8,
+          "TP": 12
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.7,
+        "uncertain_rate": 0.3,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.3,
+        "decided": {
+          "n": 14,
+          "accuracy": 0.8571428571428571,
+          "precision": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.923076923076923,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.14285714285714285,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 2,
+            "TP": 12
+          }
+        }
+      }
+    },
+    "openfake-flux.1-schnell": {
+      "binary@0.5": {
+        "n": 11,
+        "accuracy": 0.9090909090909091,
+        "precision": 1.0,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.09090909090909091,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 10
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 11,
+          "accuracy": 0.9090909090909091,
+          "precision": 1.0,
+          "recall": 0.9090909090909091,
+          "f1": 0.9523809523809523,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.09090909090909091,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 10
+          }
+        }
+      }
+    },
+    "openfake-flux.2-dev": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 0.5,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.5,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.5,
+        "uncertain_rate": 0.5,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.5,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-flux.2-klein-base-4b": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-gpt-image-1": {
+      "binary@0.5": {
+        "n": 14,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 14
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.9285714285714286,
+        "uncertain_rate": 0.07142857142857142,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.07142857142857142,
+        "decided": {
+          "n": 13,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 13
+          }
+        }
+      }
+    },
+    "openfake-grok-2-image-1212": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.0,
+        "uncertain_rate": 1.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 1.0
+      }
+    },
+    "openfake-hidream-i1-full": {
+      "binary@0.5": {
+        "n": 4,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 4
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.75,
+        "uncertain_rate": 0.25,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.25,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-hunyuan-video": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-ideogram-3.0": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 0.8571428571428571,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.923076923076923,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.14285714285714285,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 6
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 7,
+          "accuracy": 0.8571428571428571,
+          "precision": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.923076923076923,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.14285714285714285,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 6
+          }
+        }
+      }
+    },
+    "openfake-imagen-3.0-002": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "openfake-imagen-4.0": {
+      "binary@0.5": {
+        "n": 3,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 3
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-kolors-v1.0": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-midjourney-6": {
+      "binary@0.5": {
+        "n": 4,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 4
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 4,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 4
+          }
+        }
+      }
+    },
+    "openfake-mystic": {
+      "binary@0.5": {
+        "n": 3,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 3
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-openflux.1": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 0.0,
+        "precision": NaN,
+        "recall": 0.0,
+        "f1": 0.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 1.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 0
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.0,
+        "uncertain_rate": 1.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 1.0
+      }
+    },
+    "openfake-playground-v2.5-1024px-aesthetic": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.5,
+        "uncertain_rate": 0.5,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.5,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-qwen-image": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-realistic_vision_v5.1_novae": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "openfake-sd-1.5": {
+      "binary@0.5": {
+        "n": 4,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 4
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.75,
+        "uncertain_rate": 0.25,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.25,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-sd-1.5-dreamshaper": {
+      "binary@0.5": {
+        "n": 12,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 12
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 12,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 12
+          }
+        }
+      }
+    },
+    "openfake-sd-1.5-epicdream": {
+      "binary@0.5": {
+        "n": 3,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 3
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-sd-2.1": {
+      "binary@0.5": {
+        "n": 21,
+        "accuracy": 0.9047619047619048,
+        "precision": 1.0,
+        "recall": 0.9047619047619048,
+        "f1": 0.9500000000000001,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.09523809523809523,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 2,
+          "TP": 19
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.7619047619047619,
+        "uncertain_rate": 0.23809523809523808,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.23809523809523808,
+        "decided": {
+          "n": 16,
+          "accuracy": 0.9375,
+          "precision": 1.0,
+          "recall": 0.9375,
+          "f1": 0.967741935483871,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0625,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 15
+          }
+        }
+      }
+    },
+    "openfake-sd-3.5": {
+      "binary@0.5": {
+        "n": 29,
+        "accuracy": 0.8620689655172413,
+        "precision": 1.0,
+        "recall": 0.8620689655172413,
+        "f1": 0.9259259259259259,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.13793103448275862,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 4,
+          "TP": 25
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.8275862068965517,
+        "uncertain_rate": 0.1724137931034483,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.1724137931034483,
+        "decided": {
+          "n": 24,
+          "accuracy": 0.9583333333333334,
+          "precision": 1.0,
+          "recall": 0.9583333333333334,
+          "f1": 0.9787234042553191,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.041666666666666664,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 23
+          }
+        }
+      }
+    },
+    "openfake-sd-turbo": {
+      "binary@0.5": {
+        "n": 3,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 3
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-sd-xl-v1.0-vae-fix": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-sdxl": {
+      "binary@0.5": {
+        "n": 8,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 8
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.875,
+        "uncertain_rate": 0.125,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.125,
+        "decided": {
+          "n": 7,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 7
+          }
+        }
+      }
+    },
+    "openfake-sdxl-1.0": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-sdxl-epic-realism": {
+      "binary@0.5": {
+        "n": 10,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 10
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 10,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 10
+          }
+        }
+      }
+    },
+    "openfake-sdxl-juggernaut": {
+      "binary@0.5": {
+        "n": 6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 6
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 6,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 6
+          }
+        }
+      }
+    },
+    "openfake-sdxl-realvis-v5": {
+      "binary@0.5": {
+        "n": 4,
+        "accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.25,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 3
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 4,
+          "accuracy": 0.75,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.25,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "openfake-sdxl-touchofrealism": {
+      "binary@0.5": {
+        "n": 5,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 5
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 5,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 5
+          }
+        }
+      }
+    },
+    "openfake-sdxl-turbo": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "openfake-seedream-v4.5": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-stable-diffusion-v1-4": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-stable-diffusion-v1-5": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 0.5,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.5,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 0.5,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.5,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-studio-ghibli-wan2.1-t2v-14b-v1.0": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "openfake-tiny-random-sana": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-wan-video-2.1": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "openfake-wan-video-2.2": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    }
+  }
+}

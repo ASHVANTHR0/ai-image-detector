@@ -1,0 +1,43 @@
+{
+  "binary@0.5": {
+    "n": 218,
+    "accuracy": 0.6055045871559633,
+    "precision": 1.0,
+    "recall": 0.09473684210526316,
+    "f1": 0.17307692307692307,
+    "specificity": 1.0,
+    "fpr": 0.0,
+    "fnr": 0.9052631578947369,
+    "confusion_matrix": {
+      "TN": 123,
+      "FP": 0,
+      "FN": 86,
+      "TP": 9
+    },
+    "roc_auc": 0.6037655113393238
+  },
+  "thresholded": {
+    "t_low": 0.1,
+    "t_high": 0.9,
+    "coverage": 0.963302752293578,
+    "uncertain_rate": 0.03669724770642202,
+    "uncertain_rate_real": 0.0,
+    "uncertain_rate_ai": 0.08421052631578947,
+    "decided": {
+      "n": 210,
+      "accuracy": 0.5952380952380952,
+      "precision": 1.0,
+      "recall": 0.022988505747126436,
+      "f1": 0.0449438202247191,
+      "specificity": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.9770114942528736,
+      "confusion_matrix": {
+        "TN": 123,
+        "FP": 0,
+        "FN": 85,
+        "TP": 2
+      }
+    }
+  }
+}

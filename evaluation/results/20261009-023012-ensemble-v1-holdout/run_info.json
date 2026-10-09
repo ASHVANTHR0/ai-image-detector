@@ -1,0 +1,32 @@
+{
+  "run_id": "20261009-023012-ensemble-v1-holdout",
+  "split": "holdout",
+  "n_images": 199,
+  "dataset_version": "f5db3bfb5c3f47b4",
+  "manifest": "dataset/benchmark/manifest.csv",
+  "config": "evaluation/results/ensemble/ensemble-v1/ensemble_config.json",
+  "members": [
+    {
+      "name": "ateeqq_siglip",
+      "type": "hf",
+      "path": "models/ateeqq_siglip",
+      "weight": 0.1928
+    },
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 0.477
+    }
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "peak_gpu_memory_mb": 1756,
+  "ms_per_image": {
+    "ateeqq_siglip": 15.21,
+    "haywoodsloan_swinv2": 38.77
+  },
+  "batch_size": 8,
+  "python": "3.13.5",
+  "torch": "2.11.0+cu128"
+}

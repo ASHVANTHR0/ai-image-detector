@@ -54,7 +54,7 @@ def run_split(split: str, config: dict, batch_size: int) -> pd.DataFrame | None:
     scores, ms = run(df, detectors, batch_size)
     weights = {m["name"]: m.get("weight", 1.0) for m in config["members"]}
     p = [combine({n: float(scores[n][i]) for n in scores}, weights, config.get("method", "weighted_average"),
-                 config.get("calibration")) for i in range(len(df))]
+                 config.get("calibration"), config.get("intercept", 0.0)) for i in range(len(df))]
     out = df[["path", "label", "generator", "split"]].assign(model=config["version"], ai_probability=p,
                                                              **{f"score_{n}": s for n, s in scores.items()})
     out.attrs["ms_per_image"] = sum(ms.values())

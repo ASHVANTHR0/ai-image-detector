@@ -16,19 +16,36 @@ The full plan is in [plan/AI_Image_Detection_Full_Project_Plan.md](plan/AI_Image
 | Phase | Status |
 |---|---|
 | 1 Environment, app skeleton | ✅ done |
-| 2 Dataset | ⏳ tooling done (`scripts/dataset_tool.py`); **images still to be collected** |
-| 3 Baseline evaluation | ⏳ two pretrained detectors installed; `scripts/evaluate.py` ready; needs the dataset |
-| 4 Custom training | ⏳ `scripts/train.py` ready; needs the dataset |
-| 5 Ensemble + thresholds | ⏳ `scripts/fit_ensemble.py` ready; **current weights/thresholds are provisional** |
-| 6 Error analysis | ⏳ `scripts/error_analysis.py` ready |
-| 7 Backend | ✅ done, 43 tests passing |
+| 2 Dataset | ⏳ tooling done; 417-image OpenFake benchmark sampled; **training images still to be collected** |
+| 3 Baseline evaluation | ✅ 9 pretrained detectors benchmarked (below) |
+| 4 Custom training | ⏳ `scripts/train.py` ready; needs a training set |
+| 5 Ensemble + thresholds | ✅ `ensemble-v1` fitted on the benchmark's validation half |
+| 6 Error analysis | ⏳ weak spots identified (below); `scripts/error_analysis.py` ready |
+| 7 Backend | ✅ done, 62 tests passing, including the provenance validator |
 | 8 Frontend | ✅ done |
 | 9 Final evaluation | ⏳ `scripts/final_evaluation.py` ready (run once, at the end) |
 | 10 Documentation | ⏳ in progress |
 
-The app works today with two pretrained detectors (`Organika/sdxl-detector`, `umm-maybe/AI-image-detector`) at equal
-weights and 10% / 90% thresholds. Those values are **not tuned yet**, so don't quote results from the app until Phases 2–5
-are done.
+### How an image is judged
+
+1. **Provenance validator.** Signed C2PA Content Credentials (verified with the official `c2pa` library), IPTC
+   DigitalSourceType, or embedded generation parameters (Stable Diffusion, ComfyUI, NovelAI ...). If the file itself
+   declares it was AI generated, the answer is *AI generated, verified*. Absence of metadata proves nothing.
+2. **Detector ensemble `ensemble-v1`.** `haywoodsloan/ai-image-detector-deploy` (SwinV2) and
+   `Ateeqq/ai-vs-human-image-detector` (SigLIP), combined by logistic stacking over their log-odds. AI if p ≥ 0.56,
+   real if p ≤ 0.39, otherwise uncertain.
+
+### Measured accuracy (OpenFake benchmark, holdout half, n = 199, never used for any choice)
+
+| | Accuracy | AI caught (recall) | Real wrongly flagged (FPR) | ROC-AUC |
+|---|---|---|---|---|
+| Previous detectors (sdxl-detector, AI-image-detector) | 70% / 61% (validation) | 66% / 37% | 28% / 20% | 0.72 / 0.59 |
+| **ensemble-v1** | **91.0%** (95% CI 86.9–95.0%) | 88.2% | 7.3% | 0.963 |
+
+These generators are held out of OpenFake's training data: GPT Image 1.5/2, nano-banana, Sora 2, Veo 3, Midjourney 7,
+Flux.2 and others. Weak spots: in-the-wild Reddit photos (74% of real ones correct) and FLUX.2-klein (3 of 7 caught).
+No detector is 100% accurate; treat results as strong evidence, not proof. Reproduce with
+`scripts/fetch_benchmark.py`, `scripts/evaluate.py`, `scripts/select_detectors.py` and `scripts/fit_ensemble.py --method logit_stack`.
 
 ## Setup (Windows)
 
@@ -41,7 +58,8 @@ venv\Scripts\activate
 pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
 #   or: pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cpu
 pip install -r backend\requirements.txt
-python scripts\download_models.py        # ~700 MB, once; afterwards runs offline
+python scripts\download_models.py --only haywoodsloan_swinv2 ateeqq_siglip   # models used by the app (~1.1 GB), once
+# (no --only = all 10 candidates, ~4 GB, needed only to re-run the benchmark)
 cd frontend; npm install; cd ..
 ```
 

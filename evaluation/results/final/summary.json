@@ -1,0 +1,302 @@
+{
+  "model": "ensemble-v3b",
+  "date": "2026-10-09T23:25:59",
+  "dataset_version": "e59e60ea7dea7fb1",
+  "thresholds": {
+    "t_low": 0.23,
+    "t_high": 0.74
+  },
+  "splits": {
+    "test": {
+      "n": 466,
+      "accuracy": 0.9141630901287554,
+      "precision": 0.9223744292237442,
+      "recall": 0.8977777777777778,
+      "f1": 0.9099099099099099,
+      "specificity": 0.9294605809128631,
+      "fpr": 0.07053941908713693,
+      "fnr": 0.10222222222222223,
+      "roc_auc": 0.9745689257722452,
+      "ci95": {
+        "accuracy": [
+          0.8862660944206009,
+          0.9399141630901288
+        ],
+        "precision": [
+          0.8858414872798434,
+          0.9555653450807636
+        ],
+        "recall": [
+          0.8495528936942274,
+          0.9350679413179412
+        ],
+        "f1": [
+          0.8785023538415158,
+          0.9369408454007151
+        ],
+        "fpr": [
+          0.04052702702702703,
+          0.10400416666666666
+        ],
+        "fnr": [
+          0.06493205868205867,
+          0.15044710630577257
+        ],
+        "roc_auc": [
+          0.9613177180365721,
+          0.9854189110652025
+        ]
+      },
+      "confusion_matrix": {
+        "TN": 224,
+        "FP": 17,
+        "FN": 23,
+        "TP": 202
+      },
+      "coverage": 0.8841201716738197,
+      "decided": {
+        "n": 412,
+        "accuracy": 0.9538834951456311,
+        "precision": 0.9540816326530612,
+        "recall": 0.949238578680203,
+        "f1": 0.9516539440203563,
+        "specificity": 0.958139534883721,
+        "fpr": 0.04186046511627907,
+        "fnr": 0.050761421319796954,
+        "confusion_matrix": {
+          "TN": 206,
+          "FP": 9,
+          "FN": 10,
+          "TP": 187
+        }
+      },
+      "by_generator": {
+        "none": {
+          "n": 241,
+          "accuracy": 0.9294605809128631
+        },
+        "openfake-amateur-photography-v6": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-anima-preview": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-animagine-xl-4.0": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-chroma": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-cyberrealistic-pony-v14.1": {
+          "n": 3,
+          "accuracy": 1.0
+        },
+        "openfake-cyberrealistic-pony-v15.0": {
+          "n": 2,
+          "accuracy": 1.0
+        },
+        "openfake-cyberrealistic-pony-v17.0": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-cyberrealistic-xl-v9.0": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-dalle-3": {
+          "n": 4,
+          "accuracy": 1.0
+        },
+        "openfake-flux-1.1-pro": {
+          "n": 8,
+          "accuracy": 0.625
+        },
+        "openfake-flux-amateursnapshotphotos": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-flux-mvc5000": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-flux-realism": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-flux.1-dev": {
+          "n": 20,
+          "accuracy": 0.6
+        },
+        "openfake-flux.1-schnell": {
+          "n": 11,
+          "accuracy": 0.9090909090909091
+        },
+        "openfake-flux.2-dev": {
+          "n": 2,
+          "accuracy": 0.5
+        },
+        "openfake-flux.2-klein-base-4b": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-gpt-image-1": {
+          "n": 14,
+          "accuracy": 1.0
+        },
+        "openfake-grok-2-image-1212": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-hidream-i1-full": {
+          "n": 4,
+          "accuracy": 1.0
+        },
+        "openfake-hunyuan-video": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-ideogram-3.0": {
+          "n": 7,
+          "accuracy": 0.8571428571428571
+        },
+        "openfake-imagen-3.0-002": {
+          "n": 2,
+          "accuracy": 1.0
+        },
+        "openfake-imagen-4.0": {
+          "n": 3,
+          "accuracy": 1.0
+        },
+        "openfake-kolors-v1.0": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-midjourney-6": {
+          "n": 4,
+          "accuracy": 1.0
+        },
+        "openfake-mystic": {
+          "n": 3,
+          "accuracy": 1.0
+        },
+        "openfake-openflux.1": {
+          "n": 1,
+          "accuracy": 0.0
+        },
+        "openfake-playground-v2.5-1024px-aesthetic": {
+          "n": 2,
+          "accuracy": 1.0
+        },
+        "openfake-qwen-image": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-realistic_vision_v5.1_novae": {
+          "n": 2,
+          "accuracy": 1.0
+        },
+        "openfake-sd-1.5": {
+          "n": 4,
+          "accuracy": 1.0
+        },
+        "openfake-sd-1.5-dreamshaper": {
+          "n": 12,
+          "accuracy": 1.0
+        },
+        "openfake-sd-1.5-epicdream": {
+          "n": 3,
+          "accuracy": 1.0
+        },
+        "openfake-sd-2.1": {
+          "n": 21,
+          "accuracy": 0.9047619047619048
+        },
+        "openfake-sd-3.5": {
+          "n": 29,
+          "accuracy": 0.8620689655172413
+        },
+        "openfake-sd-turbo": {
+          "n": 3,
+          "accuracy": 1.0
+        },
+        "openfake-sd-xl-v1.0-vae-fix": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-sdxl": {
+          "n": 8,
+          "accuracy": 1.0
+        },
+        "openfake-sdxl-1.0": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-sdxl-epic-realism": {
+          "n": 10,
+          "accuracy": 1.0
+        },
+        "openfake-sdxl-juggernaut": {
+          "n": 6,
+          "accuracy": 1.0
+        },
+        "openfake-sdxl-realvis-v5": {
+          "n": 4,
+          "accuracy": 0.75
+        },
+        "openfake-sdxl-touchofrealism": {
+          "n": 5,
+          "accuracy": 1.0
+        },
+        "openfake-sdxl-turbo": {
+          "n": 2,
+          "accuracy": 1.0
+        },
+        "openfake-seedream-v4.5": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-stable-diffusion-v1-4": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-stable-diffusion-v1-5": {
+          "n": 2,
+          "accuracy": 0.5
+        },
+        "openfake-studio-ghibli-wan2.1-t2v-14b-v1.0": {
+          "n": 2,
+          "accuracy": 1.0
+        },
+        "openfake-tiny-random-sana": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-wan-video-2.1": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "openfake-wan-video-2.2": {
+          "n": 2,
+          "accuracy": 1.0
+        }
+      },
+      "confidence_histogram": [
+        181,
+        29,
+        19,
+        9,
+        9,
+        8,
+        10,
+        12,
+        24,
+        165
+      ],
+      "ms_per_image": 51.83986952761188
+    }
+  }
+}

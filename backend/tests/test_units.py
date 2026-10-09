@@ -32,6 +32,15 @@ def test_decide_medium_confidence_with_narrow_band():
     assert decide(0.25, 0.3, 0.7) == ("REAL", "MEDIUM")
 
 
+def test_combine_logit_stack():
+    # sigmoid(0.5 + 2*logit(0.8) + 1*logit(0.3)) computed by hand
+    import math
+    z = 0.5 + 2 * math.log(0.8 / 0.2) + math.log(0.3 / 0.7)
+    expected = 1 / (1 + math.exp(-z))
+    assert combine({"a": 0.8, "b": 0.3}, {"a": 2, "b": 1}, "logit_stack", intercept=0.5) == pytest.approx(expected)
+    assert 0 < combine({"a": 0.0, "b": 1.0}, {"a": 1, "b": 1}, "logit_stack") < 1  # extreme scores are clipped
+
+
 def test_combine_weighted_and_vote():
     assert combine({"a": 1.0, "b": 0.0}, {"a": 3, "b": 1}) == pytest.approx(0.75)
     assert combine({"a": 0.9, "b": 0.2, "c": 0.7}, {"a": 1, "b": 1, "c": 1}, "majority_vote") == pytest.approx(2 / 3)

@@ -116,10 +116,13 @@ def main() -> None:
     ap.add_argument("run_dir", help="evaluation/results/<run_id> from scripts/evaluate.py on validation")
     ap.add_argument("--config", default=str(ENSEMBLE_CONFIG))
     ap.add_argument("--version", required=True, help="new version string, e.g. ensemble-v2")
+    ap.add_argument("--method", choices=["weighted_average", "logit_stack"], default="weighted_average",
+                    help="logit_stack = logistic regression over member log-odds (handles badly calibrated members)")
     ap.add_argument("--weight-step", type=float, default=0.05)
     ap.add_argument("--no-calibration", action="store_true")
     ap.add_argument("--seed", type=int, default=42)
-    ap.add_argument("--write", action="store_true", help="write the new ensemble_config.json")
+    ap.add_argument("--write", action="store_true",
+                    help="install the result as models/ensemble/ensemble_config.json (the previous one is backed up)")
     args = ap.parse_args()
 
     run_dir = resolve(args.run_dir)
@@ -127,6 +130,8 @@ def main() -> None:
     if set(df["split"]) != {"validation"}:
         raise SystemExit("Ensemble fitting must use validation predictions only.")
     config = json.loads(resolve(args.config).read_text())
+    info_path = run_dir / "run_info.json"
+    run_info = json.loads(info_path.read_text()) if info_path.exists() else {}
     names = [m["name"] for m in config["members"]]
     S = df[[f"score_{n}" for n in names]].to_numpy()
     y = df["label"].to_numpy().astype(int)
@@ -144,9 +149,16 @@ def main() -> None:
     comparison = pd.DataFrame(results)
     print(comparison.round(4).to_string(index=False))
 
-    calibration = None
+    calibration, intercept = None, 0.0
     final_p = weighted
-    if not args.no_calibration:
+    if args.method == "logit_stack":
+        # Honest probabilities for threshold search come from cross-fitting; the stored model is fitted on all rows.
+        final_p = stack if len(names) > 1 else platt(y, S[:, 0], args.seed)[0]
+        model = LogisticRegression().fit(logit(S), y)
+        weights, intercept = model.coef_[0], float(model.intercept_[0])
+        print(f"\nStacking model: intercept {intercept:.3f}, coefficients "
+              + ", ".join(f"{n}={w:.3f}" for n, w in zip(names, weights)))
+    elif not args.no_calibration:
         final_p, calibration = platt(y, weighted, args.seed)
         print(f"\nPlatt calibration a={calibration['a']:.3f} b={calibration['b']:.3f}; "
               f"Brier {brier_score_loss(y, weighted):.4f} -> {brier_score_loss(y, final_p):.4f} (cross-fitted)")
@@ -166,19 +178,23 @@ def main() -> None:
 
     new_config = {
         "version": args.version,
-        "method": "weighted_average",
+        "method": args.method,
         "members": [{**m, "weight": round(float(w), 4)} for m, w in zip(config["members"], weights)],
+        "intercept": round(intercept, 4),
         "calibration": calibration,
         "t_low": float(choice.t_low),
         "t_high": float(choice.t_high),
-        "fitted_on": {"run": run_dir.name, "split": "validation", "n": int(len(df)), "dataset_version": dataset_version(),
+        "fitted_on": {"run": run_dir.name, "split": "validation", "n": int(len(df)), "dataset_version": dataset_version(resolve(run_info.get("manifest", "dataset/manifest.csv"))),
+                      "manifest": run_info.get("manifest", "dataset/manifest.csv"),
                       "targets_met": bool(met), "date": date.today().isoformat()},
     }
     (out / "ensemble_config.json").write_text(json.dumps(new_config, indent=2))
     print(f"\nReport files in {out}")
     if args.write:
-        target = resolve(args.config)
-        shutil.copy2(target, target.with_name(f"ensemble_config.{config['version']}.bak.json"))
+        target = ENSEMBLE_CONFIG
+        if target.exists():
+            old_version = json.loads(target.read_text()).get("version", "previous")
+            shutil.copy2(target, target.with_name(f"ensemble_config.{old_version}.bak.json"))
         target.write_text(json.dumps(new_config, indent=2))
         print(f"Wrote {target} (previous version backed up)")
 

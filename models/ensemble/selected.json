@@ -1,0 +1,21 @@
+{
+  "version": "selected",
+  "method": "weighted_average",
+  "members": [
+    {
+      "name": "ateeqq_siglip",
+      "type": "hf",
+      "path": "models/ateeqq_siglip",
+      "weight": 1.0
+    },
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 1.0
+    }
+  ],
+  "calibration": null,
+  "t_low": 0.1,
+  "t_high": 0.9
+}

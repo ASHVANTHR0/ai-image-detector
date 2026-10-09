@@ -1,0 +1,37 @@
+{
+  "version": "ensemble-v2",
+  "method": "logit_stack",
+  "members": [
+    {
+      "name": "ateeqq_siglip",
+      "type": "hf",
+      "path": "models/ateeqq_siglip",
+      "weight": 0.1169
+    },
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 0.4661
+    },
+    {
+      "name": "detector_clip",
+      "type": "timm",
+      "path": "models/detector_clip",
+      "weight": 0.9523
+    }
+  ],
+  "intercept": 1.3318,
+  "calibration": null,
+  "t_low": 0.31,
+  "t_high": 0.54,
+  "fitted_on": {
+    "run": "20261009-231529-cands3-benchval",
+    "split": "validation",
+    "n": 218,
+    "dataset_version": "f5db3bfb5c3f47b4",
+    "manifest": "dataset/benchmark/manifest.csv",
+    "targets_met": true,
+    "date": "2026-10-09"
+  }
+}

@@ -1,14 +1,37 @@
 {
-  "version": "ensemble-v0-provisional",
-  "method": "weighted_average",
+  "version": "ensemble-v3b",
+  "method": "logit_stack",
   "members": [
-    {"name": "sdxl_detector", "type": "hf", "path": "models/detector_a", "weight": 0.5},
-    {"name": "ai_image_detector", "type": "hf", "path": "models/detector_b", "weight": 0.5}
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 0.2499
+    },
+    {
+      "name": "detector_clip",
+      "type": "timm",
+      "path": "models/detector_clip",
+      "weight": 0.1127
+    },
+    {
+      "name": "detector_clip_ft",
+      "type": "timm",
+      "path": "models/detector_clip_ft",
+      "weight": 0.4621
+    }
   ],
+  "intercept": 0.114,
   "calibration": null,
-  "t_low": 0.1,
-  "t_high": 0.9,
+  "t_low": 0.23,
+  "t_high": 0.74,
   "fitted_on": {
-    "note": "PROVISIONAL: equal weights and the plan's example thresholds. Not tuned yet. Replace by running scripts/evaluate.py + scripts/fit_ensemble.py on the validation split."
+    "run": "20261009-232416-cands4-ownval",
+    "split": "validation",
+    "n": 468,
+    "dataset_version": "e59e60ea7dea7fb1",
+    "manifest": "dataset/manifest.csv",
+    "targets_met": true,
+    "date": "2026-10-09"
   }
 }

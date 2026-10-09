@@ -25,19 +25,33 @@ def decide(ai_probability: float, t_low: float, t_high: float) -> tuple[str, str
     return prediction, confidence
 
 
+def _logit(p: float) -> float:
+    p = min(max(p, 1e-6), 1 - 1e-6)
+    return math.log(p / (1 - p))
+
+
 def combine(scores: dict[str, float], weights: dict[str, float], method: str = "weighted_average",
-            calibration: dict | None = None) -> float:
+            calibration: dict | None = None, intercept: float = 0.0) -> float:
+    """Merge member AI probabilities into one.
+
+    weighted_average: weighted mean of probabilities.
+    majority_vote:    share of members voting AI at 0.5.
+    logit_stack:      logistic regression over the members' log-odds, p = sigmoid(intercept + sum w_i * logit(s_i)).
+                      It learns each member's reliability and puts badly calibrated members on a common scale.
+    """
     if method == "weighted_average":
         total = sum(weights[n] for n in scores)
         p = sum(scores[n] * weights[n] for n in scores) / total
     elif method == "majority_vote":
         votes = [scores[n] >= 0.5 for n in scores]
         p = sum(votes) / len(votes)
+    elif method == "logit_stack":
+        z = intercept + sum(weights[n] * _logit(scores[n]) for n in scores)
+        p = 1 / (1 + math.exp(-max(min(z, 50), -50)))
     else:
         raise ValueError(f"Unknown ensemble method {method!r}")
     if calibration and calibration.get("type") == "platt":
-        logit = math.log(max(p, 1e-6) / max(1 - p, 1e-6))
-        p = 1 / (1 + math.exp(-(calibration["a"] * logit + calibration["b"])))
+        p = 1 / (1 + math.exp(-(calibration["a"] * _logit(p) + calibration["b"])))
     return p
 
 
@@ -57,6 +71,7 @@ class Ensemble:
         self.t_low: float = config["t_low"]
         self.t_high: float = config["t_high"]
         self.calibration: dict | None = config.get("calibration")
+        self.intercept: float = config.get("intercept", 0.0)
         self.weights = {m["name"]: m.get("weight", 1.0) for m in config["members"]}
         self.detectors = detectors
 
@@ -69,6 +84,6 @@ class Ensemble:
 
     def predict(self, image: Image.Image) -> EnsembleResult:
         scores = {d.name: float(d.predict([image])[0]) for d in self.detectors}
-        p = combine(scores, self.weights, self.method, self.calibration)
+        p = combine(scores, self.weights, self.method, self.calibration, self.intercept)
         prediction, confidence = decide(p, self.t_low, self.t_high)
         return EnsembleResult(p, prediction, confidence, scores)

@@ -1,0 +1,31 @@
+name: clip_linear
+backbone: vit_base_patch16_clip_224.openai
+input_size: 224
+resize_ratio: 1.14
+batch_size: 32
+grad_accum: 1
+head_epochs: 15
+head_lr: 0.001
+epochs: 0
+lr: 2.0e-05
+weight_decay: 0.0
+warmup_epochs: 0
+drop_rate: 0.0
+patience: 3
+select_metric: roc_auc
+seed: 42
+num_workers: 4
+amp: true
+aug:
+  crop_scale_min: 0.6
+  rotation: 10
+  brightness: 0.2
+  contrast: 0.2
+  jpeg_p: 0.5
+  jpeg_quality:
+  - 60
+  - 100
+  blur_p: 0.1
+limit_train: null
+limit_val: null
+dataset_version: e59e60ea7dea7fb1

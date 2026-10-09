@@ -1,0 +1,81 @@
+{
+  "run_id": "20261009-022812-candidates-val",
+  "split": "validation",
+  "n_images": 218,
+  "dataset_version": "f5db3bfb5c3f47b4",
+  "manifest": "dataset/benchmark/manifest.csv",
+  "config": "models/ensemble/candidates.json",
+  "members": [
+    {
+      "name": "sdxl_detector",
+      "type": "hf",
+      "path": "models/detector_a",
+      "weight": 1.0
+    },
+    {
+      "name": "ai_image_detector",
+      "type": "hf",
+      "path": "models/detector_b",
+      "weight": 1.0
+    },
+    {
+      "name": "ateeqq_siglip",
+      "type": "hf",
+      "path": "models/ateeqq_siglip",
+      "weight": 1.0
+    },
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 1.0
+    },
+    {
+      "name": "dima806_vit_real",
+      "type": "hf",
+      "path": "models/dima806_vit_real",
+      "weight": 1.0
+    },
+    {
+      "name": "dima806_vit_human",
+      "type": "hf",
+      "path": "models/dima806_vit_human",
+      "weight": 1.0
+    },
+    {
+      "name": "smogy_swin",
+      "type": "hf",
+      "path": "models/smogy_swin",
+      "weight": 1.0
+    },
+    {
+      "name": "nyuad_vit",
+      "type": "hf",
+      "path": "models/nyuad_vit",
+      "weight": 1.0
+    },
+    {
+      "name": "prithiv_siglip2",
+      "type": "hf",
+      "path": "models/prithiv_siglip2",
+      "weight": 1.0
+    }
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "peak_gpu_memory_mb": 4087,
+  "ms_per_image": {
+    "sdxl_detector": 19.61,
+    "ai_image_detector": 18.57,
+    "ateeqq_siglip": 16.8,
+    "haywoodsloan_swinv2": 40.92,
+    "dima806_vit_real": 14.99,
+    "dima806_vit_human": 16.1,
+    "smogy_swin": 17.79,
+    "nyuad_vit": 15.77,
+    "prithiv_siglip2": 16.36
+  },
+  "batch_size": 8,
+  "python": "3.13.5",
+  "torch": "2.11.0+cu128"
+}

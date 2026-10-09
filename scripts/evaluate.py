@@ -88,7 +88,7 @@ def main() -> None:
     if len(members) == len(config["members"]):
         weights = {m["name"]: m.get("weight", 1.0) for m in members}
         ensemble_p = [combine({n: float(scores[n][i]) for n in scores}, weights, config.get("method", "weighted_average"),
-                              config.get("calibration")) for i in range(len(df))]
+                              config.get("calibration"), config.get("intercept", 0.0)) for i in range(len(df))]
         preds = base.assign(model=config["version"], ai_probability=ensemble_p,
                             **{f"score_{n}": s for n, s in scores.items()})
         preds.to_csv(out / "predictions.csv", index=False)

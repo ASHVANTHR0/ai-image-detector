@@ -1,0 +1,24 @@
+{
+  "type": "timm",
+  "backbone": "vit_base_patch16_clip_224.openai",
+  "input_size": 224,
+  "resize_ratio": 1.14,
+  "mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "checkpoint": "best.pt",
+  "label_mapping": {
+    "0": "REAL",
+    "1": "AI_GENERATED"
+  },
+  "output": "sigmoid(logit) = ai_probability",
+  "run_id": "20261009-231902-clip_vitb16",
+  "dataset_version": "e59e60ea7dea7fb1"
+}
