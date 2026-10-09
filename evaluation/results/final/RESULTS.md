@@ -37,12 +37,21 @@ F1 0.952, FPR 0.042, FNR 0.051. The remaining 11.6% are returned as `UNCERTAIN`.
 - Real-photo false positives were the main problem found in error analysis (v2 had 21.5% FPR on validation). On
   test, FPR is 7.1% forced and 4.2% on decided images.
 
-## Cross-generator reference (not a sealed test)
+## Cross-generator test (unseen generators)
 
-The OpenFake benchmark holdout (`evaluation/results/20261009-023012-ensemble-v1-holdout`, n = 199) uses generators
-from OpenFake's *test* split that are absent from our training data. `ensemble-v1` scored 91.0% accuracy there.
-`ensemble-v3b` was **not** re-scored on that holdout. It scored 92.2% on the benchmark *validation* split, which it was
-not fitted on, but that split was read during model selection.
+After the freeze, the frozen `ensemble-v3b` was run once on the OpenFake benchmark holdout
+(`evaluation/results/20261009-232918-ensemble-v3b-holdout`, n = 199). Its AI images come from OpenFake *test*
+generators that are absent from our training data: GPT Image 1.5/2, Midjourney 7, Sora 2, Veo 3, FLUX.2-klein-9b,
+Recraft v3 and others.
+- Forced decision: accuracy 0.935 (95% CI 0.900–0.970), FPR 0.041, FNR 0.105, ROC-AUC 0.971.
+- With the uncertainty band: coverage 0.895; on decided images, accuracy 0.966 and FPR 0.017.
+
+For comparison, `ensemble-v1` scored 0.910 on the same holdout. Caveats:
+- v1 had been scored on this holdout before, and the benchmark *validation* half was used to choose between v3 and
+  v3b.
+- The benchmark keeps original files, while our test split is re-encoded, so the two distributions differ.
+
+Robustness to compression and edits (validation split): `evaluation/results/20261009-233447-robustness-ensemble-v3b/`.
 
 ## Limitations
 
@@ -51,5 +60,6 @@ not fitted on, but that split was read during model selection.
   224 px, which reduces but does not remove this risk.
 - **Small and narrow data.** 3,116 images from one source family (OpenFake: LAION and Pexels reals). The fine-tuned
   CLIP model overfits (99.9% train vs 85.9% validation accuracy).
-- **No sealed unseen-generator split** in this dataset version.
+- **No sealed unseen-generator split** inside our own dataset; the benchmark holdout stands in for it.
+- **Heavy JPEG compression** (quality 30) raises the miss rate on AI images from 9.7% to 44.7% (validation).
 - The detector can be fooled by post-processing it was not trained on. Results do not imply universal accuracy.

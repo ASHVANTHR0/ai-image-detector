@@ -1,0 +1,39 @@
+{
+  "run_id": "20261009-232918-ensemble-v3b-holdout",
+  "split": "holdout",
+  "n_images": 199,
+  "dataset_version": "f5db3bfb5c3f47b4",
+  "manifest": "dataset/benchmark/manifest.csv",
+  "config": "C:\\Users\\Ashvanth\\Desktop\\Ai_image_finder\\models\\ensemble\\ensemble_config.json",
+  "members": [
+    {
+      "name": "haywoodsloan_swinv2",
+      "type": "hf",
+      "path": "models/haywoodsloan_swinv2",
+      "weight": 0.2499
+    },
+    {
+      "name": "detector_clip",
+      "type": "timm",
+      "path": "models/detector_clip",
+      "weight": 0.1127
+    },
+    {
+      "name": "detector_clip_ft",
+      "type": "timm",
+      "path": "models/detector_clip_ft",
+      "weight": 0.4621
+    }
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "peak_gpu_memory_mb": 2687,
+  "ms_per_image": {
+    "haywoodsloan_swinv2": 39.07,
+    "detector_clip": 14.25,
+    "detector_clip_ft": 14.47
+  },
+  "batch_size": 16,
+  "python": "3.13.5",
+  "torch": "2.11.0+cu128"
+}

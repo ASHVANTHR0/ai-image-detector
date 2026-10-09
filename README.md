@@ -13,39 +13,45 @@ The full plan is in [plan/AI_Image_Detection_Full_Project_Plan.md](plan/AI_Image
 
 ## Current status
 
+All ten phases are complete. Final report: [docs/final_report.md](docs/final_report.md). Viva notes:
+[docs/viva_prep.md](docs/viva_prep.md).
+
 | Phase | Status |
 |---|---|
-| 1 Environment, app skeleton | ✅ done |
-| 2 Dataset | ⏳ tooling done; 417-image OpenFake benchmark sampled; **training images still to be collected** |
-| 3 Baseline evaluation | ✅ 9 pretrained detectors benchmarked (below) |
-| 4 Custom training | ⏳ `scripts/train.py` ready; needs a training set |
-| 5 Ensemble + thresholds | ✅ `ensemble-v1` fitted on the benchmark's validation half |
-| 6 Error analysis | ⏳ weak spots identified (below); `scripts/error_analysis.py` ready |
-| 7 Backend | ✅ done, 62 tests passing, including the provenance validator |
-| 8 Frontend | ✅ done |
-| 9 Final evaluation | ⏳ `scripts/final_evaluation.py` ready (run once, at the end) |
-| 10 Documentation | ⏳ in progress |
+| 1 Environment, app skeleton | ✅ |
+| 2 Dataset | ✅ 3,116 OpenFake-train images, group-aware splits, no leakage; plus a 417-image unseen-generator benchmark |
+| 3 Baseline evaluation | ✅ 9 pretrained detectors benchmarked |
+| 4 Custom training | ✅ CLIP ViT-B/16 linear probe (val AUC 0.853) and full fine-tune (val AUC 0.940) |
+| 5 Ensemble + thresholds | ✅ `ensemble-v3b`, logistic stacking fitted on validation |
+| 6 Error analysis | ✅ found and reduced real-photo false positives (21.5% → 9.5% on validation) |
+| 7 Backend | ✅ 62 tests passing, including the provenance validator |
+| 8 Frontend | ✅ |
+| 9 Final evaluation | ✅ frozen and run once (`evaluation/results/final/`) |
+| 10 Documentation | ✅ report, methodology, architecture, experiments, viva prep |
 
 ### How an image is judged
 
 1. **Provenance validator.** Signed C2PA Content Credentials (verified with the official `c2pa` library), IPTC
    DigitalSourceType, or embedded generation parameters (Stable Diffusion, ComfyUI, NovelAI ...). If the file itself
    declares it was AI generated, the answer is *AI generated, verified*. Absence of metadata proves nothing.
-2. **Detector ensemble `ensemble-v1`.** `haywoodsloan/ai-image-detector-deploy` (SwinV2) and
-   `Ateeqq/ai-vs-human-image-detector` (SigLIP), combined by logistic stacking over their log-odds. AI if p ≥ 0.56,
-   real if p ≤ 0.39, otherwise uncertain.
+2. **Detector ensemble `ensemble-v3b`.** `haywoodsloan/ai-image-detector-deploy` (SwinV2), plus two detectors trained
+   here on CLIP ViT-B/16: a frozen-backbone linear probe and a full fine-tune. They are combined by logistic
+   stacking over their log-odds. The result is AI if p ≥ 0.74, real if p ≤ 0.23, and uncertain otherwise.
 
-### Measured accuracy (OpenFake benchmark, holdout half, n = 199, never used for any choice)
+### Measured accuracy
 
-| | Accuracy | AI caught (recall) | Real wrongly flagged (FPR) | ROC-AUC |
-|---|---|---|---|---|
-| Previous detectors (sdxl-detector, AI-image-detector) | 70% / 61% (validation) | 66% / 37% | 28% / 20% | 0.72 / 0.59 |
-| **ensemble-v1** | **91.0%** (95% CI 86.9–95.0%) | 88.2% | 7.3% | 0.963 |
+| Test set | n | Accuracy (forced) | 95% CI | FPR | ROC-AUC | Decided images | Accuracy when decided |
+|---|---|---|---|---|---|---|---|
+| Sealed test (seen generator families) | 466 | **91.4%** | 88.6–94.0% | 7.1% | 0.975 | 88.4% | **95.4%** (FPR 4.2%) |
+| Unseen generators (OpenFake benchmark holdout) | 199 | **93.5%** | 90.0–97.0% | 4.1% | 0.971 | 89.5% | **96.6%** (FPR 1.7%) |
 
-These generators are held out of OpenFake's training data: GPT Image 1.5/2, nano-banana, Sora 2, Veo 3, Midjourney 7,
-Flux.2 and others. Weak spots: in-the-wild Reddit photos (74% of real ones correct) and FLUX.2-klein (3 of 7 caught).
-No detector is 100% accurate; treat results as strong evidence, not proof. Reproduce with
-`scripts/fetch_benchmark.py`, `scripts/evaluate.py`, `scripts/select_detectors.py` and `scripts/fit_ensemble.py --method logit_stack`.
+Weak spots:
+- Heavy JPEG compression: at quality 30, 45% of AI images are missed.
+- FLUX.1-dev and FLUX 1.1 Pro.
+- Midjourney 7.
+
+No detector is 100% accurate; treat results as strong evidence, not proof. Details and limitations are in
+[evaluation/results/final/RESULTS.md](evaluation/results/final/RESULTS.md).
 
 ## Setup (Windows)
 
@@ -58,8 +64,12 @@ venv\Scripts\activate
 pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
 #   or: pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cpu
 pip install -r backend\requirements.txt
-python scripts\download_models.py --only haywoodsloan_swinv2 ateeqq_siglip   # models used by the app (~1.1 GB), once
+python scripts\download_models.py --only haywoodsloan_swinv2   # pretrained member of the app's ensemble, once
 # (no --only = all 10 candidates, ~4 GB, needed only to re-run the benchmark)
+# The two CLIP detectors' weights (models/detector_clip*/best.pt) are not in git. Recreate them with
+#   python scripts\fetch_training_data.py; python scripts\dataset_tool.py index; python scripts\dataset_tool.py split
+#   python scripts\train.py --config experiments\configs\clip_linear.yaml --export models\detector_clip
+#   python scripts\train.py --config experiments\configs\clip_vitb16.yaml --export models\detector_clip_ft
 cd frontend; npm install; cd ..
 ```
 
@@ -119,15 +129,15 @@ backend/app/        FastAPI app: api/ (routes), models/ (detectors, ensemble), s
                     prediction, forensics), database/ (SQLite + schemas), utils/ (validation, hashing)
 backend/tests/      pytest suite (fake detector, no model download needed)
 frontend/src/       Vue app: views/ (Dashboard, Detect, History, Analytics, About), components/, services/
-scripts/            dataset_tool, download_models, evaluate, train, fit_ensemble, error_analysis, final_evaluation
+scripts/            dataset_tool, download_models, evaluate, train, fit_ensemble, error_analysis, robustness, final_evaluation
 evaluation/         metrics.py (single metrics implementation) and results/
 experiments/        configs/ (training YAML) and one folder per training run
-models/             detector_a, detector_b (pretrained), ensemble/ensemble_config.json
+models/             pretrained detectors, detector_clip / detector_clip_ft (trained here), ensemble/ensemble_config.json
 dataset/            raw/, manifest.csv (the source of truth for splits)
-docs/               architecture.md, methodology.md, experiments.md
+docs/               final_report.md, viva_prep.md, architecture.md, methodology.md, experiments.md
 ```
 
-## Model licenses
+## Data and model licenses
 
-`Organika/sdxl-detector` is **CC BY-NC 3.0** (non-commercial use only; fine for academic work).
-`umm-maybe/AI-image-detector` is **CC BY 4.0**. Both are recorded in `models/detector_*/source.json` with their exact revisions.
+OpenFake (training data and benchmark) is **CC BY-NC 4.0**: non-commercial use only. `haywoodsloan/ai-image-detector-deploy`
+is Apache-2.0. Pinned revisions are in `models/*/source.json`.

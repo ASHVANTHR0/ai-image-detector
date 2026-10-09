@@ -1,0 +1,876 @@
+{
+  "binary@0.5": {
+    "n": 199,
+    "accuracy": 0.9346733668341709,
+    "precision": 0.9315068493150684,
+    "recall": 0.8947368421052632,
+    "f1": 0.912751677852349,
+    "specificity": 0.959349593495935,
+    "fpr": 0.04065040650406504,
+    "fnr": 0.10526315789473684,
+    "confusion_matrix": {
+      "TN": 118,
+      "FP": 5,
+      "FN": 8,
+      "TP": 68
+    },
+    "roc_auc": 0.9712237911852802,
+    "ci95": {
+      "accuracy": [
+        0.8994974874371859,
+        0.9698492462311558
+      ],
+      "precision": [
+        0.8717948717948718,
+        0.9857142857142858
+      ],
+      "recall": [
+        0.8214285714285714,
+        0.9565372670807454
+      ],
+      "f1": [
+        0.8605785123966943,
+        0.9577549127097917
+      ],
+      "fpr": [
+        0.008130081300813009,
+        0.07896483465300418
+      ],
+      "fnr": [
+        0.043462732919254655,
+        0.17857142857142858
+      ],
+      "roc_auc": [
+        0.9439130329808296,
+        0.9924900478714086
+      ]
+    }
+  },
+  "thresholded": {
+    "t_low": 0.23,
+    "t_high": 0.74,
+    "coverage": 0.8944723618090452,
+    "uncertain_rate": 0.10552763819095477,
+    "uncertain_rate_real": 0.06504065040650407,
+    "uncertain_rate_ai": 0.17105263157894737,
+    "decided": {
+      "n": 178,
+      "accuracy": 0.9662921348314607,
+      "precision": 0.9672131147540983,
+      "recall": 0.9365079365079365,
+      "f1": 0.9516129032258064,
+      "specificity": 0.9826086956521739,
+      "fpr": 0.017391304347826087,
+      "fnr": 0.06349206349206349,
+      "confusion_matrix": {
+        "TN": 113,
+        "FP": 2,
+        "FN": 4,
+        "TP": 59
+      }
+    }
+  },
+  "by_generator": {
+    "ernie-image": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "ernie-image-turbo": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "flux.2-klein-9b": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 0.8571428571428571,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.923076923076923,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.14285714285714285,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 6
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.5714285714285714,
+        "uncertain_rate": 0.42857142857142855,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.42857142857142855,
+        "decided": {
+          "n": 4,
+          "accuracy": 0.75,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.25,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "frames-23-1-25": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "gpt-image-1.5": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 7
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 7,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 7
+          }
+        }
+      }
+    },
+    "gpt-image-2": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "ideogram-2.0": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.0,
+        "uncertain_rate": 1.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 1.0
+      }
+    },
+    "illustrious": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 7
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 7,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 7
+          }
+        }
+      }
+    },
+    "lumina-17-2-25": {
+      "binary@0.5": {
+        "n": 3,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 3
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "midjourney-7": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 0.7142857142857143,
+        "precision": 1.0,
+        "recall": 0.7142857142857143,
+        "f1": 0.8333333333333333,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.2857142857142857,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 2,
+          "TP": 5
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.8571428571428571,
+        "uncertain_rate": 0.14285714285714285,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.14285714285714285,
+        "decided": {
+          "n": 6,
+          "accuracy": 0.8333333333333334,
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.16666666666666666,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 1,
+            "TP": 5
+          }
+        }
+      }
+    },
+    "nano-banana-pro": {
+      "binary@0.5": {
+        "n": 1,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 1
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "none": {
+      "binary@0.5": {
+        "n": 123,
+        "accuracy": 0.959349593495935,
+        "precision": 0.0,
+        "recall": NaN,
+        "f1": 0.0,
+        "specificity": 0.959349593495935,
+        "fpr": 0.04065040650406504,
+        "fnr": NaN,
+        "confusion_matrix": {
+          "TN": 118,
+          "FP": 5,
+          "FN": 0,
+          "TP": 0
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.9349593495934959,
+        "uncertain_rate": 0.06504065040650407,
+        "uncertain_rate_real": 0.06504065040650407,
+        "uncertain_rate_ai": NaN,
+        "decided": {
+          "n": 115,
+          "accuracy": 0.9826086956521739,
+          "precision": 0.0,
+          "recall": NaN,
+          "f1": 0.0,
+          "specificity": 0.9826086956521739,
+          "fpr": 0.017391304347826087,
+          "fnr": NaN,
+          "confusion_matrix": {
+            "TN": 113,
+            "FP": 2,
+            "FN": 0,
+            "TP": 0
+          }
+        }
+      }
+    },
+    "recraft-v3": {
+      "binary@0.5": {
+        "n": 5,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.2,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 4
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.6,
+        "uncertain_rate": 0.4,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.4,
+        "decided": {
+          "n": 3,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 3
+          }
+        }
+      }
+    },
+    "reddit": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 0.5714285714285714,
+        "precision": 1.0,
+        "recall": 0.5714285714285714,
+        "f1": 0.7272727272727273,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.42857142857142855,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 3,
+          "TP": 4
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.8571428571428571,
+        "uncertain_rate": 0.14285714285714285,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.14285714285714285,
+        "decided": {
+          "n": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.3333333333333333,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 2,
+            "TP": 4
+          }
+        }
+      }
+    },
+    "seedream-v5.0": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 2,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 2
+          }
+        }
+      }
+    },
+    "sora-2": {
+      "binary@0.5": {
+        "n": 2,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 2
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.5,
+        "uncertain_rate": 0.5,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.5,
+        "decided": {
+          "n": 1,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 1
+          }
+        }
+      }
+    },
+    "veo-3": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 0.8571428571428571,
+        "precision": 1.0,
+        "recall": 0.8571428571428571,
+        "f1": 0.923076923076923,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.14285714285714285,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 1,
+          "TP": 6
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.8571428571428571,
+        "uncertain_rate": 0.14285714285714285,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.14285714285714285,
+        "decided": {
+          "n": 6,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 6
+          }
+        }
+      }
+    },
+    "wan-video-2.5": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 7
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 1.0,
+        "uncertain_rate": 0.0,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.0,
+        "decided": {
+          "n": 7,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 7
+          }
+        }
+      }
+    },
+    "z-image-turbo": {
+      "binary@0.5": {
+        "n": 7,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "specificity": NaN,
+        "fpr": NaN,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "TN": 0,
+          "FP": 0,
+          "FN": 0,
+          "TP": 7
+        },
+        "roc_auc": NaN
+      },
+      "thresholded": {
+        "t_low": 0.23,
+        "t_high": 0.74,
+        "coverage": 0.5714285714285714,
+        "uncertain_rate": 0.42857142857142855,
+        "uncertain_rate_real": NaN,
+        "uncertain_rate_ai": 0.42857142857142855,
+        "decided": {
+          "n": 4,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "specificity": NaN,
+          "fpr": NaN,
+          "fnr": 0.0,
+          "confusion_matrix": {
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "TP": 4
+          }
+        }
+      }
+    }
+  }
+}
